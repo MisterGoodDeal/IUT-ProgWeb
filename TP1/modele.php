@@ -1,7 +1,13 @@
 <?php
-class Modele {
+
+
+class Modele extends Connexion {
+	
+	private $db;
 	
 	public function __construct() {	
+		$this->db = new Connexion();
+		$this->db->initConnexion();
 	}
 	
 	function getListe() {
@@ -10,5 +16,16 @@ class Modele {
 	
 	function getMenu() {
 		return array('<p><a href="index.php?action=bienvenue">Page d\'accueil</a></p>', '<p><a href="index.php?action=liste">Liste de joueurs</a></p>');
+	}
+}
+
+class Connexion {
+	static protected $bdd;
+	
+	public function __construct() {
+	}
+	
+	public static function initConnexion() {
+		self::$bdd = mysqli_connect("database-etudiants.iut.univ-paris8.fr", "dutinfopw20163", "dasedase", "dutinfopw20163");
 	}
 }

@@ -1,4 +1,4 @@
 Login : dutinfopw20163
 Mot de passe : dasedase
-IP : databse-etudiants.iut.univ-paris8.fr
+IP : database-etudiants.iut.univ-paris8.fr
 PHPMyAdmin : http://database-etudiants.iut.univ-paris8.fr/phpmyadmin/
